@@ -1,0 +1,30 @@
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+!.env.production.example
+**/application-local.properties
+**/application-local.yml
+**/application-local.yaml
+**/secrets/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Backend build output
+backend/target/
+
+# IDE and operating system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local exports and logs
+*.sql
+*.sql.gz
+*.log
+backend/cookies.txt
