@@ -86,7 +86,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
 
                         // ROOT URL
-                        .requestMatchers("/").permitAll()
+                .requestMatchers("/", "/error").permitAll()
 
                         // AUTHENTICATION
                         .requestMatchers(
