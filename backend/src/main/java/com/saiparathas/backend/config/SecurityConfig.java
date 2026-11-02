@@ -35,7 +35,10 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173")
+                List.of(
+                        "http://localhost:5173",
+                        "https://sai-parathas-frontend.onrender.com"
+                )
         );
 
         configuration.setAllowedMethods(
@@ -86,7 +89,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
 
                         // ROOT URL
-                .requestMatchers("/", "/error").permitAll()
+                        .requestMatchers("/", "/error").permitAll()
 
                         // AUTHENTICATION
                         .requestMatchers(
